@@ -1,5 +1,7 @@
 # LinkedIn Poll Scheduler
 
+This project is a starter scheduler and validation workflow for LinkedIn poll content. It prepares and validates scheduled poll definitions, and is intended to be connected to an approved publishing workflow.
+
 A starter app to prepare, schedule, and manage LinkedIn poll posts from a structured YAML configuration.
 
 ## What this app does
