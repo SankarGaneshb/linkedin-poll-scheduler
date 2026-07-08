@@ -15,9 +15,16 @@ This starter package is designed to be ready for local use and extension. It doe
 ## Quick start
 ```bash
 python -m venv .venv
-source .venv/bin/activate
+.venv\Scripts\activate
 pip install -r requirements.txt
-python src/scheduler.py --config config/polls.example.yaml --dry-run
+python src\scheduler.py --config config\polls.example.yaml --dry-run
+```
+
+```bash
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python .\src\scheduler.py --config .\config\polls.example.yaml --dry-run
 ```
 
 ## Project structure
