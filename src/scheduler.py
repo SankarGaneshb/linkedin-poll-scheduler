@@ -17,17 +17,23 @@ def load_jobs(config_path: Path) -> list[PollJob]:
         if errors:
             joined = "; ".join(errors)
             raise ValueError(f"Poll #{idx} is invalid: {joined}")
+        
+        pub_at = item["publish_at"]
+        if isinstance(pub_at, str):
+            pub_at = datetime.fromisoformat(pub_at)
+
         jobs.append(
             PollJob(
                 question=item["question"].strip(),
                 options=[str(opt).strip() for opt in item["options"]],
-                publish_at=datetime.fromisoformat(item["publish_at"]),
+                publish_at=pub_at,
                 timezone=item["timezone"],
                 audience=item.get("audience", "public"),
                 dry_run=bool(item.get("dry_run", True)),
             )
         )
     return jobs
+
 
 
 def print_schedule(jobs: list[PollJob]) -> None:
