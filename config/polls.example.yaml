@@ -1,0 +1,22 @@
+polls:
+  - question: "Which AI workflow helps your team most?"
+    options:
+      - "Prompt templates"
+      - "Agent orchestration"
+      - "Evaluation pipelines"
+      - "Deployment automation"
+    publish_at: "2026-07-12T09:30:00"
+    timezone: "Asia/Kolkata"
+    audience: "public"
+    dry_run: true
+
+  - question: "What matters most in production AI apps?"
+    options:
+      - "Latency"
+      - "Cost"
+      - "Reliability"
+      - "Observability"
+    publish_at: "2026-07-15T18:00:00"
+    timezone: "Asia/Kolkata"
+    audience: "connections"
+    dry_run: true
